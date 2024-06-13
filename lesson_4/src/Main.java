@@ -25,6 +25,7 @@ public class Main {
                 break;
             }else if (heroesHealth[3]-bossDamage<=0){
                 System.out.println("!Medic died and couldn't heal anymore!");
+                break;
             }
         }
     }
