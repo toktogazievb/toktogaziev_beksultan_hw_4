@@ -19,10 +19,12 @@ public class Main {
 
     public static void heroesHealing() {
         for (int i = 0; i < heroesHealth.length; i++) {
-            if (heroesHealth[i] > 0 && heroesHealth[i] < 100 && heroesHealth[i]!=heroesHealth[3]) {
+            if (heroesHealth[i] > 0 && heroesHealth[i]< 100 && heroesHealth[i]!=heroesHealth[3]) {
                 heroesHealth[i] += medicHealing;
-                System.out.println(heroesAttackType[i] + " hero will be healed on " + medicHealing);
+                System.out.println("!"+heroesAttackType[i] + " hero will be healed at " + medicHealing + "health!");
                 break;
+            }else if (heroesHealth[3]-bossDamage<=0){
+                System.out.println("!Medic died and couldn't heal anymore!");
             }
         }
     }
